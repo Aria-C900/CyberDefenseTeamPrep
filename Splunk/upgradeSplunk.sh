@@ -9,6 +9,8 @@
 
 SPLUNK_UPGRADE_LINK="https://download.splunk.com/products/splunk/releases/9.4.0/linux/splunk-9.4.0-6b4ebe426ca6.x86_64.rpm"
 
+# Makes the script executable from /opt/splunk/bin
+chmod +x "$0"
 # Check if running as root/sudo
 if [ "$EUID" -ne 0 ]; then
     echo "Please run this script with sudo privileges"
