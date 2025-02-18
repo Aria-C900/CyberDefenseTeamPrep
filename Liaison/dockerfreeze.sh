@@ -19,6 +19,8 @@ pause_all_containers() {
 
         echo "All running Docker containers have been paused."
     fi
+
+    #add how to unfreeze in case of emergency
 }
 
 # Call the function to pause all containers
