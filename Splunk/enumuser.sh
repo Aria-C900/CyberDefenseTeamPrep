@@ -39,3 +39,5 @@ done
 echo -e "\n=== System-wide Cron Jobs ==="
 cat /etc/crontab
 cat /etc/cron.d/*
+
+echo "Results saved to $OUTPUT_FILE"
