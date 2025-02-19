@@ -3,7 +3,7 @@
 #NOT COMPLETED!!!!!!!!!!!!
 
 # make sure to make the script executable before running
-# chmod +x "$0"
+chmod +x "$0"
 
 # Check if script is run as root
 
