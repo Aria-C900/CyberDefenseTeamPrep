@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# makes script executable
+
+chmod +x enumuser.sh
+
 # Check if script is run as root
 
 if [ "$EUID" -ne 0]; then
