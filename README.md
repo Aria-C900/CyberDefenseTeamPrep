@@ -1,0 +1,1 @@
+This file is a clone repository of SEMO-Cyber's "CyberDefenseTeamPrep". These files as directed by SEMO-Cyber are open source and public to all. I do not claim ownership of any of these scripts and promise to contribute to these scripts for the purpose of improving them and allowing others to use them to their benefit in the CCDC.
