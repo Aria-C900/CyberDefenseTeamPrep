@@ -3,7 +3,7 @@
 #NOT COMPLETED!!!!!!!!!!!!
 
 # make sure to make the script executable before running
-# sudo chmod +x enumuser.sh
+# chmod +x "$0"
 
 # Check if script is run as root
 
@@ -14,18 +14,24 @@ if [ "$EUID" -ne 0]; then
 fi
 
 echo "=== Enumerating Users ==="
-cat /etc/passwd | cut d: -f1
+awk -F':' '{print $1}' /etc/passwd
+
+#cat /etc/passwd | cut d: -f1
 #TROUBLESHOOT: under this, cut -d: is not recognized
 
 echo -e "\n=== Enumerating Cron Jobs ==="
 #TROUBLESHOOT: cut: you must specifiy a list of bytes/characters or field 
-for user in $(cut -d: f1 /etc/passwd); do
-    cronfile="/var/spool/cron/crontabs/$user"
-    if [ -f "$cronfile" ]; then
-        echo -e "\n[+] Cron jobs for user: $user"
-        cat "$cronfile"
-    fi
+#for user in $(cut -d: f1 /etc/passwd); do
+for user in $(awk -F':' '{print $1}' /etc/passwd); do
+    echo "Cron jobs for user: $user"
+    crontab -l -u "$user" 2>/dev/null || echo "No cron jobs for $user"
 done
+    #cronfile="/var/spool/cron/crontabs/$user"
+    #if [ -f "$cronfile" ]; then
+        #echo -e "\n[+] Cron jobs for user: $user"
+        #cat "$cronfile"
+    #fi
+#done
 
 #system wide cron jobs works as expected
 echo -e "\n=== System-wide Cron Jobs ==="
