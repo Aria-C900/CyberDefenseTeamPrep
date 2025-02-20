@@ -8,8 +8,8 @@
 # Samuel Brucker 2024-2025
 #
 #    Note: Right now the script is only looking at distro name to decide what custom inputs are used. This includes the custom name Splunk sees.
-#          As we get two Ubuntu machines, this means they will share a name. YOU MUST MANUALLY CHANGE THIS IN THE SCRIPT ON THE UBUNTU WORKSTATION
-#          BEFORE RUNNING, OR IT WILL MAKE SEARCHING SPLUNK MUCH MORE DIFFICULT FOR THOSE MACHINES.
+
+#          As we get two Ubuntu machines, this means they will share a name. YOU MUST MANUALLY CHANGE THIS IN THE SCRIPT ON THE UBUNTU WORKSTATION BEFORE RUNNING, OR IT WILL MAKE SEARCHING SPLUNK MUCH MORE DIFFICULT FOR THOSE MACHINES.
 #
 #          I hope to find a good solution to fix this - and I have several in mind - but I don't have the time to develop and test that right now.
 
