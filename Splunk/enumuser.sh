@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#NOT COMPLETED!!!!!!!!!!!!
-
 # make sure to make the script executable before running
 chmod +x "$0"
 
@@ -12,7 +10,12 @@ if [ "$EUID" -ne 0 ]; then
     exit 1
 fi
 
-OUTPUT_FILE="enumeration_results_$(date +%Y%m%d_%H%M%S).txt" #results are dumped into enumeration_results
+counter=1
+while [[ -e "enum_results${counter}.txt" ]]; do
+    ((counter++))
+done
+
+OUTPUT_FILE="enum_results${counter}.txt" #results are dumped into enum_results, increments w/ each creation of file to compare past vs future
 
 #Enumerates users on the splunk CLI and puts them into enumeration_results_.txt + includes per-user cron jobs as well
 echo "=== Enumerating Users ===" | tee -a "$OUTPUT_FILE"
