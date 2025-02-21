@@ -6,8 +6,10 @@
 # 
 # James Meghrian
 # Jan. 2025
+# Run on the Palo Alto machine, PAN-OS 11 for 2025 CCDC competition
 
-printf "Starting housemd script\n"
+
+printf "Starting housemd script\n" # lets the user know the script is starting
 
 # get team ip
 printf "Enter team IP number should be between (21-40): "
