@@ -34,27 +34,27 @@ host = ActiveDirectory
 
 [WinEventLog://Security]
 disabled = 0
-index = main
+index = ActiveDirectory
 
 [WinEventLog://Application]
 dsiabled = 0
-index = main
+index = ActiveDirectory
 
 [WinEventLog://System]
 disabled = 0
-index = main
+index = ActiveDirectory
 
 [WinEventLog://DNS Server]
 disabled = 0
-index = main
+index = ActiveDirectory
 
 [WinEventLog://Directory Service]
 disabled = 0
-index = main
+index = ActiveDirectory
 
 [WinEventLog://Windows Powershell]
 disabled = 0
-index = main
+index = ActiveDirectory
 "@ | Out-File -FilePath $inputsConfPath -Encoding ASCII
 
 # Disable KVStore if necessary
@@ -62,7 +62,7 @@ $serverConfPath = "$INSTALL_DIR\etc\system\local\server.conf"
 Write-Host "Setting custom hostname for the logs..."
 @"
 [general]
-serverName = ActiveDirectory
+serverName = ADDS19
 hostnameOption = shortname
 "@ | Out-File -FilePath $serverConfPath -Encoding ASCII
 
