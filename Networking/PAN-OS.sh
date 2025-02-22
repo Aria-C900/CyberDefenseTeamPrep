@@ -3,6 +3,7 @@
 # Replace "cli" with the actual command if different.
 # Rough draft w/ AI look over, special thanks to Ronnie!
 
+# note: public facing ips are your team number + 20
 cli <<'EOF'
 configure
 delete address "Google DNS"
