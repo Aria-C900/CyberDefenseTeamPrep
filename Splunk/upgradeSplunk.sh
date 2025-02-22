@@ -7,6 +7,9 @@
 #
 #  Samuel Brucker 2024-2025
 
+
+# Potential issue: if you update the splunk script and then download forwarders for windows/linux, make sure the version as also changed. (ex: 9.4.0)
+
 SPLUNK_UPGRADE_LINK="https://download.splunk.com/products/splunk/releases/9.4.0/linux/splunk-9.4.0-6b4ebe426ca6.x86_64.rpm"
 
 # Makes the script executable from /opt/splunk/bin
