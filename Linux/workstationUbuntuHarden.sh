@@ -11,7 +11,7 @@ fi
 
 echo "Setting device banner"
 cat > /etc/issue << EOF
-LEGAL DISCLAIMER: This computer system is the property of Team 13 LLC. By using this system, you acknowledge and agree to comply with all applicable polcies, which include the acceptable use of Splunk. Your activities may be monitored, logged and audited for security purposes. Any unauthorized access or misuse may result in legal consequences. If you do not agree to abide by these terms, you must log off immediately!
+LEGAL DISCLAIMER: This computer system is the property of Team 17 LLC. By using this system, you acknowledge and agree to comply with all applicable polcies, which include the acceptable use of Splunk. Your activities may be monitored, logged and audited for security purposes. Any unauthorized access or misuse may result in legal consequences. If you do not agree to abide by these terms, you must log off immediately!
 EOF
 
 # Install necessary tools and dependencies
